@@ -1,0 +1,572 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monu Kumar | Portfolio</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #071426;
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #0d203d;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* COMMON SECTION */
+
+        section {
+            padding: 75px 8%;
+            scroll-margin-top: 80px;
+        }
+
+        /* HOME SECTION */
+
+        .home {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        .home h1 {
+            font-size: 48px;
+            color: #38bdf8;
+        }
+
+        .home h2 {
+            font-size: 25px;
+            margin: 12px 0;
+        }
+
+        .home p {
+            color: #cbd5e1;
+            max-width: 550px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #0284c7;
+            color: white;
+            border-radius: 7px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0369a1;
+            transform: translateY(-3px);
+        }
+
+        /* PROFILE IMAGE */
+
+        .image {
+            width: 280px;
+            height: 280px;
+            flex-shrink: 0;
+        }
+
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+            border: 5px solid #38bdf8;
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+        }
+
+        /* SECTION TITLES */
+
+        .section-title {
+            font-size: 32px;
+            color: #38bdf8;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        /* CARDS */
+
+        .card {
+            background: #10243e;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #1e4166;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .card h3 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            margin-bottom: 5px;
+        }
+
+        /* SKILLS AND PROJECTS */
+
+        .skills-container,
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill {
+            text-align: center;
+            padding: 25px;
+            background: #10243e;
+            border-radius: 10px;
+            border: 1px solid #1e4166;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .skill h3 {
+            color: #38bdf8;
+        }
+
+        .skill p {
+            color: #cbd5e1;
+        }
+
+        /* CONTACT LINKS */
+
+        .card a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        .card a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #0d203d;
+            color: #cbd5e1;
+        }
+
+        /* MOBILE RESPONSIVE */
+
+        @media (max-width: 750px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 18px 5%;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .home {
+                flex-direction: column-reverse;
+                text-align: center;
+                justify-content: center;
+                padding-top: 50px;
+            }
+
+            .home h1 {
+                font-size: 36px;
+            }
+
+            .home h2 {
+                font-size: 20px;
+            }
+
+            .image {
+                width: 200px;
+                height: 200px;
+            }
+
+            section {
+                padding: 55px 6%;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">Monu Kumar</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#career">Career</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HOME SECTION -->
+
+    <section class="home" id="home">
+
+        <div>
+
+            <h1>Hi, I'm Monu Kumar</h1>
+
+            <h2>BCA Student | Aspiring Software Developer</h2>
+
+            <p>
+                Welcome to my personal portfolio!
+
+                I am pursuing BCA from CIMAGE Professional College.
+
+                I am interested in programming, technology
+                and software development.
+            </p>
+
+            <a href="#about" class="btn">
+                Explore My Portfolio
+            </a>
+
+        </div>
+
+        <!-- PROFILE IMAGE -->
+
+        <div class="image">
+
+            <img src="my image.webp"
+                 alt="Monu Kumar Profile Photo">
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT SECTION -->
+
+    <section id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="card">
+
+            <p>
+                My name is Monu Kumar. I am currently pursuing
+                Bachelor of Computer Applications (BCA) from
+                CIMAGE Professional College.
+
+                I completed my Class 10th in 2023 with 63%
+                and Class 12th in 2025 with 55%.
+
+                I also appeared for the JEE Main examination
+                but could not qualify.
+
+                I have an interest in computer science,
+                programming, software development and
+                emerging technologies.
+
+                I am continuously learning new skills
+                and improving my technical knowledge.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION SECTION -->
+
+    <section id="education">
+
+        <h2 class="section-title">Education</h2>
+
+        <div class="card">
+
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+
+            <p>CIMAGE Professional College</p>
+
+            <p>Status: Currently Pursuing</p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Class 12th</h3>
+
+            <p>Year: 2025</p>
+
+            <p>Percentage: 55%</p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Class 10th</h3>
+
+            <p>Year: 2023</p>
+
+            <p>Percentage: 63%</p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>JEE Main Examination</h3>
+
+            <p>Appeared: Did not qualify.</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS SECTION -->
+
+    <section id="skills">
+
+        <h2 class="section-title">My Technical Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill">
+
+                <h3>Java</h3>
+
+                <p>Programming Language</p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <h3>C Programming</h3>
+
+                <p>Programming Fundamentals</p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <h3>MS Excel</h3>
+
+                <p>Spreadsheet and Data Management</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS SECTION -->
+
+    <section id="projects">
+
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="projects-container">
+
+            <div class="card">
+
+                <h3>Student Marksheet</h3>
+
+                <p>Project using Microsoft Excel.</p>
+
+                <p>Status: Add project when completed.</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Electricity Bill Calculator</h3>
+
+                <p>
+                    A Java programming project to
+                    calculate electricity bills.
+                </p>
+
+                <p>Status: Add project when completed.</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Personal Portfolio</h3>
+
+                <p>
+                    Personal website created using
+                    HTML and CSS.
+                </p>
+
+                <p>Status: In Development.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CAREER OBJECTIVE -->
+
+    <section id="career">
+
+        <h2 class="section-title">Career Objective</h2>
+
+        <div class="card">
+
+            <p>
+                My goal is to become a skilled software developer.
+
+                I want to improve my programming,
+                logical thinking and problem-solving skills
+                and build useful technology solutions.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+
+    <section id="contact">
+
+        <h2 class="section-title">Contact Me</h2>
+
+        <div class="card">
+
+            <h3>Monu Kumar</h3>
+
+            <p>
+                Email:
+                <a href="mailto:monubabu910@gmail.com">
+                    monubabu910@gmail.com
+                </a>
+            </p>
+
+            <p>Location: Patna, Bihar, India</p>
+
+            <p>
+                LinkedIn:
+                <a href="https://linkedin.com/in/monu-kumar-452857393"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    LinkedIn Profile
+                </a>
+            </p>
+
+            <p>
+                GitHub:
+                <a href="https://github.com/Monu123ku"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    GitHub Profile
+                </a>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>© 2026 Monu Kumar | Personal Portfolio</p>
+
+        <p>Designed with HTML and CSS</p>
+
+    </footer>
+
+</body>
+
+</html>
